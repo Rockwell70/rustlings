@@ -1,3 +1,5 @@
+use std::cmp::Ordering;
+
 // quiz1.rs
 //
 // This is a quiz for the following sections:
@@ -16,7 +18,16 @@
 // I AM NOT DONE
 
 // Put your function here!
-// fn calculate_price_of_apples {
+
+fn calculate_price_of_apples(apples: i32) -> i32{
+    let mut cost: i32 = 0;
+
+    match apples.cmp(&41) {
+        Ordering::Less  => cost = apples * 2,
+        Ordering::Equal | Ordering::Greater => cost = apples
+    }
+    return cost;
+}
 
 // Don't modify this function!
 #[test]
