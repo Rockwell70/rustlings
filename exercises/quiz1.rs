@@ -15,7 +15,6 @@ use std::cmp::Ordering;
 //
 // No hints this time ;)
 
-// I AM NOT DONE
 
 // Put your function here!
 

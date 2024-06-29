@@ -8,7 +8,11 @@
 // I AM NOT DONE
 
 fn main() {
-    let a = ???
+    let mut a: Vec<i32> = Vec::new();
+
+    for number in 1..101 {
+        a.push(number);
+    }
 
     if a.len() >= 100 {
         println!("Wow, that's a big array!");
