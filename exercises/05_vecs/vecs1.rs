@@ -7,13 +7,11 @@
 //
 // Execute `rustlings hint vecs1` or use the `hint` watch subcommand for a hint.
 
-// I AM NOT DONE
-
 fn array_and_vec() -> ([i32; 4], Vec<i32>) {
     let a = [10, 20, 30, 40]; // a plain array
-    let v = vec![50, 60, 70, 71];
+    let v = Vec::from(a);
 
-    return (a, v)
+    (a, v)
 }
 
 #[cfg(test)]
