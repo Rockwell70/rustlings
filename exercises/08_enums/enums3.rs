@@ -44,13 +44,20 @@ impl State {
         self.position = p;
     }
 
+
     fn process(&mut self, message: Message) {
+        let msg = Message::Quit;
+        //let msg_move = Message::Move(x, y);
         // TODO: create a match expression to process the different message variants
         // Remember: When passing a tuple as a function argument, you'll need extra parentheses:
         // fn function((t, u, p, l, e))
-        match Message::Quit => {
-            true
-        }
+        // match msg {
+        //     Message::Quit => {
+        //         println!("true")
+        //     }
+
+        // }
+
     }
 }
 
