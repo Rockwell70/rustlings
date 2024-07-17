@@ -9,10 +9,10 @@
 
 enum Message {
     // TODO: implement the message variant types based on their usage below
-    Move{x: i32, y: i32},
+    Move { x: i32, y: i32 },
     Echo(String),
     ChangeColor(i32, i32, i32),
-    Quit
+    Quit,
 }
 
 struct Point {
@@ -44,15 +44,20 @@ impl State {
         self.position = p;
     }
 
-
     fn process(&mut self, message: Message) {
         match message {
             Message::ChangeColor(r, g, b) => {
-                self.change_color((r.try_into().unwrap(), g.try_into().unwrap(), b.try_into().unwrap()));
+                self.change_color((
+                    r.try_into().unwrap(),
+                    g.try_into().unwrap(),
+                    b.try_into().unwrap(),
+                ));
             }
-            Message::Echo(str) => 
-                self.echo(str),
-            Message::Move { x, y } => self.move_position(Point { x: x.try_into().unwrap(), y: y.try_into().unwrap()}),
+            Message::Echo(str) => self.echo(str),
+            Message::Move { x, y } => self.move_position(Point {
+                x: x.try_into().unwrap(),
+                y: y.try_into().unwrap(),
+            }),
             Message::Quit => self.quit(),
         }
     }
