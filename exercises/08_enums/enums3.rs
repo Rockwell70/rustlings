@@ -54,10 +54,10 @@ impl State {
                 ));
             }
             Message::Echo(str) => self.echo(str),
-            Message::Move { x, y } => self.move_position(Point {
+            Message::Move { x, y } => self.move_position(Point{
                 x: x.try_into().unwrap(),
                 y: y.try_into().unwrap(),
-            }),
+        }),
             Message::Quit => self.quit(),
         }
     }
